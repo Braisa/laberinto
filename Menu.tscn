@@ -6,17 +6,17 @@
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_top = -1.0
-margin_right = 1028.0
-margin_bottom = 600.0
+margin_right = 1283.0
+margin_bottom = 715.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="CenterContainer"]
-margin_left = 493.0
-margin_top = 290.0
-margin_right = 534.0
-margin_bottom = 310.0
+margin_left = 621.0
+margin_top = 348.0
+margin_right = 662.0
+margin_bottom = 368.0
 text = "Start"
 script = ExtResource( 1 )
 [connection signal="pressed" from="CenterContainer/Button" to="CenterContainer/Button" method="_on_Button_pressed"]

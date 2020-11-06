@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-
 export (int) var speed = 200
 
 var velocity = Vector2()
@@ -20,6 +19,6 @@ func get_input():
 
 func _physics_process(delta):
 	get_input()
-	velocity = move_and_slide(velocity)
-	if get_slide_count() > 0:
+	var collision = move_and_collide(velocity * delta)
+	if collision:
 		get_tree().change_scene("res://Muerte.tscn")

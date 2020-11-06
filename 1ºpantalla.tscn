@@ -2,15 +2,16 @@
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://Bloque.tscn" type="PackedScene" id=3]
+[ext_resource path="res://1ºpantalla.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.592, 31.5952 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Jugador" type="KinematicBody2D" parent="."]
-position = Vector2( 240.207, 86.4296 )
+position = Vector2( 44.8987, 49.3884 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -21,5 +22,3 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador"]
 shape = SubResource( 1 )
-
-[node name="Bloque" parent="." instance=ExtResource( 3 )]
