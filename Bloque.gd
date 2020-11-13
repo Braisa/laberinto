@@ -9,8 +9,8 @@ func _ready():
 	get_node("Rect").rect_size = Vector2(32, 32)
 	#get_node("Rect").rect_position = Vector2(100, 100)
 	get_node("CollisionShape2D").set_scale(Vector2(1.6, 1.6))
-	#get_node("CollisionShape2D").position.x = 16
-	#get_node("CollisionShape2D").position.y = 16
+	get_node("CollisionShape2D").position.x = 16
+	get_node("CollisionShape2D").position.y = 16
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

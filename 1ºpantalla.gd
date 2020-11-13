@@ -2,19 +2,20 @@ extends Node2D
 
 var Bloque = preload("Bloque.tscn")
 var Area = preload("Area.tscn")
+var x = 0
+var y = 0
 
 func crear_nuevo_bloque(x, y):
-	print("Creando bloque en", x, ", ", y)
-	var nuevo_bloque = Area.instance()
+	var nuevo_bloque = Bloque.instance()
 	nuevo_bloque.position.x = x
 	nuevo_bloque.position.y = y
 	add_child(nuevo_bloque)
 	
 
 func _ready():
-	for x in range(0, 1280, 16):
-		for y in range(0, 720, 16):
-			crear_nuevo_bloque(x, y)
+	get_node("Jugador").position.x = 0
+	get_node("Jugador").position.y = 0
+		
 		
 	#while posY < 720:#ProjectSettings.get_setting("display/window/size/height"):
 		#print(posY)

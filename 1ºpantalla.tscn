@@ -1,24 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://1ºpantalla.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32.592, 31.5952 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="Jugador" type="KinematicBody2D" parent="."]
-position = Vector2( 44.8987, 49.3884 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Jugador"]
-texture = ExtResource( 2 )
+[node name="ColorRect" type="ColorRect" parent="Jugador"]
+margin_right = 60.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.996452, 0.994706 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador"]
 shape = SubResource( 1 )
