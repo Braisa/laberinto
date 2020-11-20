@@ -2,6 +2,7 @@ extends Node2D
 
 var Bloque = preload("Bloque.tscn")
 var Area = preload("Area.tscn")
+var TileMap = preload("Nivel1.tscn")
 var x = 0
 var y = 0
 
@@ -13,8 +14,9 @@ func crear_nuevo_bloque(x, y):
 	
 
 func _ready():
-	get_node("Jugador").position.x = 0
-	get_node("Jugador").position.y = 0
+	get_node("Jugador").position.x = 10
+	get_node("Jugador").position.y = 10
+	add_child(TileMap.instance())
 		
 		
 	#while posY < 720:#ProjectSettings.get_setting("display/window/size/height"):

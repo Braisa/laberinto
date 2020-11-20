@@ -9,6 +9,7 @@
 script = ExtResource( 4 )
 
 [node name="Jugador" type="KinematicBody2D" parent="."]
+collision_mask = 30
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
