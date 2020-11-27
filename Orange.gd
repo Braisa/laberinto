@@ -1,13 +1,13 @@
 extends TileMap
 
 var time = 0
-var maxTime = 2
+var maxTime = 3.0 - Globals.dificultad / 3
 
 func switch():
 	if get_collision_layer_bit(2):
 		set_collision_layer_bit(2, false)
 		hide()
-		maxTime -= 0.02
+		maxTime -= Globals.dificultad / 50
 	else:
 		set_collision_layer_bit(2, true)
 		show()

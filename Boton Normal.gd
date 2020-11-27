@@ -1,5 +1,5 @@
 extends Button
 
-func _on_Button_pressed():
-	Globals.dificultad = 1.0
+func _on_Boton_Normal_pressed():
+	Globals.dificultad = 2.0
 	get_tree().change_scene("res://1ºpantalla.tscn")
