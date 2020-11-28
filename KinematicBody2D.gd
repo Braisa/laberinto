@@ -22,7 +22,14 @@ func _physics_process(delta):
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		if collision.collider.get_collision_layer() == 8:
-			get_tree().change_scene("res://Menu.tscn")
+			get_tree().change_scene("res://Nivel2.tscn")
+			position.x = 10
+			position.y = 10
+		elif collision.collider.get_collision_layer() == 16:
+			get_tree().change_scene("res://Victoria.tscn")
+		elif collision.collider.get_collision_layer() == 32:
+			position.x = 500
+			position.y = 200
 		else:
 			get_tree().change_scene("res://Muerte.tscn")
 

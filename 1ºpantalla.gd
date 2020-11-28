@@ -17,7 +17,7 @@ func _ready():
 	get_node("Jugador").position.x = 10
 	get_node("Jugador").position.y = 10
 	add_child(TileMap.instance())
-		
+	
 		
 	#while posY < 720:#ProjectSettings.get_setting("display/window/size/height"):
 		#print(posY)
