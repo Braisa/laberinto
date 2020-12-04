@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Label.gd" type="Script" id=2]
 [ext_resource path="res://1ºpantalla.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -9,7 +10,7 @@
 script = ExtResource( 4 )
 
 [node name="Jugador" type="KinematicBody2D" parent="."]
-collision_mask = 254
+collision_mask = 1048574
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -25,3 +26,11 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador"]
 shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 58.0
+margin_bottom = 20.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

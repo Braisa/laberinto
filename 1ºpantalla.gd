@@ -2,9 +2,19 @@ extends Node2D
 
 var Bloque = preload("Bloque.tscn")
 var Area = preload("Area.tscn")
-var TileMap = preload("Nivel1.tscn")
+var Nivel1 = preload("Nivel1.tscn")
+var Nivel2 = preload("Nivel2.tscn")
+var Niveles = [Nivel1, Nivel2]
 var x = 0
 var y = 0
+
+func cambiar_nivel(nuevo_nivel):
+	get_node("Jugador").position.x = 10
+	get_node("Jugador").position.y = 10
+	add_child(Niveles[nuevo_nivel].instance())
+	if nuevo_nivel > 0:
+		Globals.vidas += 1
+		remove_child(get_children()[-2])
 
 func crear_nuevo_bloque(x, y):
 	var nuevo_bloque = Bloque.instance()
@@ -14,10 +24,7 @@ func crear_nuevo_bloque(x, y):
 	
 
 func _ready():
-	get_node("Jugador").position.x = 10
-	get_node("Jugador").position.y = 10
-	add_child(TileMap.instance())
-	
+	cambiar_nivel(0)
 		
 	#while posY < 720:#ProjectSettings.get_setting("display/window/size/height"):
 		#print(posY)
